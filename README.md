@@ -57,6 +57,8 @@ Load::organisms( 'header/header', [
 ?>
 ```
 
+Note: Add margin top to the container below the header if necessary.
+
 ## Screenshots
 ![Desktop screenshot](screenshot-desktop.png)
 ![Mobile screenshot](screenshot-mobile.gif)
