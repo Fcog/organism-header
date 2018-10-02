@@ -21,11 +21,11 @@ npm install hamburgers
 ```
 
 Add index sass in organisms sass index
-```bash
+```css
 @import 'header/index';
 ```
 Import and call the header function on document ready in the main JS file
-```bash
+```js
 import header from './organisms/header'
 ...
 header()
@@ -34,6 +34,7 @@ header()
 
 ## PHP arguments and defaults
 
+```php
 $args = wp_parse_args( $args, [
 	'class' => '',
 	'website-title' => get_bloginfo( 'name' ),
@@ -41,6 +42,7 @@ $args = wp_parse_args( $args, [
 	'logo-mobile' => '',
 	'menu-location' => 'main_menu',
 ]);
+```
 
 ## Usage
 ```php
