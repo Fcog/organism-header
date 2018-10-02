@@ -1,0 +1,12 @@
+{
+    "name": "fcog/header",
+    "description": "Organism element for use with the Lean Theme",
+    "type": "atomic-organism",
+    "authors": [
+        {
+            "name": "Fcog",
+            "email": "fcog111@gmail.com"
+        }
+    ],
+    "require": {}
+}

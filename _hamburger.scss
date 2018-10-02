@@ -1,0 +1,56 @@
+//Hamburger
+$hamburger-active-color: theme-color('primary');
+$hamburger-padding-x: 0;
+$hamburger-padding-y: 0;
+$hamburger-layer-width: 24px;
+$hamburger-layer-height: 2px;
+$hamburger-layer-spacing: 5px;
+$hamburger-layer-color: $white;
+$hamburger-layer-border-radius: 0;
+$hamburger-hover-opacity: 1;
+$hamburger-hover-transition-duration: 0.15s;
+$hamburger-hover-transition-timing-function: linear;
+
+// To use CSS filters as the hover effect instead of opacity,
+// set $hamburger-hover-use-filter as true and
+// change the value of $hamburger-hover-filter accordingly.
+$hamburger-hover-use-filter: false;
+$hamburger-hover-filter: opacity(50%);
+
+// Types (Remove or comment out what you don’t need)
+$hamburger-types: (
+  spring
+);
+
+@import 'node_modules/hamburgers/_sass/hamburgers/hamburgers.scss';
+
+.o__header__hamburger {
+  display: block;
+  position: relative;
+  padding: 0;
+  height: 25px;
+  min-width: 30px;
+  z-index: 5;
+
+  @include media-breakpoint-up(md) {
+    display: none;
+  }
+
+  &:hover {
+    background-color: transparent;
+  }
+
+  .hamburger-inner,
+  .hamburger-inner::before,
+  .hamburger-inner::after {
+    background-color: $hamburger-active-color;
+  }
+
+  &.is-active {
+    .hamburger-inner,
+    .hamburger-inner::before,
+    .hamburger-inner::after {
+      background-color: $hamburger-active-color;
+    }
+  }
+}

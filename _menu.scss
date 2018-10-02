@@ -1,0 +1,58 @@
+$active-menu-item-color: theme-color('primary');
+$mobile-menu-background-color: theme-color('white');
+
+.o__header__menu-subcontainer {
+  display: none;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  padding: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: $mobile-menu-background-color;
+  z-index: 4;
+
+  @include media-breakpoint-up(md) {
+    display: block;
+    position: static;
+    width: auto;
+    max-width: none;
+    height: auto;
+    background-color: initial;
+    transform: translateX(0);
+    transition: none;
+    transition: transform 0.2s ease-in-out;
+  }
+
+  &.is-active {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: slide-out .3s ease-out;
+
+    @media (max-device-width: md) and (orientation: landscape) {
+      align-items: flex-start;
+      padding-top: 50px;
+      padding-bottom: 20px;
+    }
+  }
+}
+
+.o__header__menu {
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+
+  @include media-breakpoint-up(md) {
+    flex-direction: row;
+  }
+
+  .menu-item {
+    margin-right: rem(10px);
+
+    &.current-menu-item {
+      color: $active-menu-item-color;
+    }
+  }
+}
