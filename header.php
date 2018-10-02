@@ -21,7 +21,7 @@ $args = wp_parse_args( $args, [
 			  	<?php if ( $args['logo-mobile'] ) : ?>
 
 					<img
-						class="o__header__logo o__header__logo--mobile"
+						class="o__header__logo-image o__header__logo-image--mobile"
 						src="<?php echo esc_url( $args['logo-mobile'] ); ?>"
 						alt="<?php echo esc_attr( $args['website-title'] ); ?>" />
 
@@ -30,7 +30,7 @@ $args = wp_parse_args( $args, [
 				<?php if ( $args['logo'] ) : ?>
 
 					<img
-						class="o__header__logo"
+						class="o__header__logo-image"
 						src="<?php echo esc_url( $args['logo'] ); ?>"
 						alt="<?php echo esc_attr( $args['website-title'] ); ?>" />
 

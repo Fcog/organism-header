@@ -26,6 +26,22 @@ $header-background-color: theme-color('white');
     }
   }
 
+  &__logo-image {
+    display: none;
+
+    @include media-breakpoint-up(md) {
+      display: block;
+    }
+
+    &--mobile {
+      display: block;
+
+      @include media-breakpoint-up(md) {
+        display: none;
+      }
+    }
+  }
+
   &__menu-container {
     margin-left: auto;
   }
